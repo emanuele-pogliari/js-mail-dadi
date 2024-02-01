@@ -1,4 +1,12 @@
+const diceElement = document.getElementById("uno");
+const mailElement = document.getElementById("due");
+
+diceElement.addEventListener("click", dice);
+mailElement.addEventListener("click", mail);
+
+
 function dice() {
+
     const computerChoice = Math.floor(Math.random() * 6 + 1);
     const userChoice = Math.floor(Math.random() * 6 + 1);
 
@@ -15,10 +23,8 @@ function dice() {
     }
 }
 
-
 function mail() {
-    const userEmail = "miamail@live.it"
-    const arrayEmail = ["cassone@gmail.com", "miamail@live.it", "palangarulez@outlook.com", "originaltemu@libero.it", "iamrealdeveloper@live.it"];
+    const arrayEmail = ["primo@gmail.com", "secondo@live.it", "terzo@outlook.com", "quarto@libero.it", "quinto@live.it"];
 
 
     let emailSearch = false;
