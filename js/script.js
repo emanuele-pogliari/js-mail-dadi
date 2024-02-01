@@ -17,17 +17,19 @@ function dice() {
 
 
 function mail() {
-    const userEmail = "pincopallo@fjfsj.com"
+    const userEmail = "miamail@live.it"
     const arrayEmail = ["cassone@gmail.com", "miamail@live.it", "palangarulez@outlook.com", "originaltemu@libero.it", "iamrealdeveloper@live.it"];
 
 
     for (let i = 0; i < arrayEmail.length; i++) {
         if (userEmail === arrayEmail[i]) {
             console.log("Accesso Eseguito");
-            return;
+            i = arrayEmail.length + 1;
         }
         if (userEmail != arrayEmail[i]) {
             console.log("Accesso Negato");
         }
     }
 }
+
+mail();
