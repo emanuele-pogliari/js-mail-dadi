@@ -21,15 +21,18 @@ function mail() {
     const arrayEmail = ["cassone@gmail.com", "miamail@live.it", "palangarulez@outlook.com", "originaltemu@libero.it", "iamrealdeveloper@live.it"];
 
 
-    for (let i = 0; i < arrayEmail.length; i++) {
+    let emailSearch = false;
+    for (let i = 0; i < arrayEmail.length && !emailSearch; i++) {
+
         if (userEmail === arrayEmail[i]) {
-            console.log("Accesso Eseguito");
-            i = arrayEmail.length + 1;
-        }
-        if (userEmail != arrayEmail[i]) {
-            console.log("Accesso Negato");
+            emailSearch = true;
         }
     }
-}
 
-mail();
+    if (emailSearch === true) {
+        console.log("email trovata");
+    }
+    else {
+        console.log("email non trovata");
+    }
+}
