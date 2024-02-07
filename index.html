@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <title>Mail e dadi</title>
 </head>
@@ -16,32 +18,38 @@
         <div class="row py-5 text-center">
             <div class="col text-capitalize py-5 fs-2 fw-bold">quale app vuoi usare?</div>
         </div>
-        <div class="row text-center justify-content-center gap-5 ">
-            <div id="uno" class="col-3 card p-md-4 p-sm-5  rounded-5 shadow justify-content-center">
-                <img class="img-fluid" src="./img/dice.svg" alt="">
+        <div class="row text-center justify-content-around">
+            <div id="uno" class="col-12 col-md-5 col-lg-3 card p-md-4 p-sm-5  rounded-5 shadow justify-content-center">
+                <img class="img-fluid p-3" src="./img/dices.png" alt="">
+                <div class="py-4 fw-bold fs-3">Dice Game</div>
             </div>
-            <div id="due" class="col-3 card p-0 rounded-5 shadow pointer-event ">
-                <img class="img-fluid rounded-5 " src="./img/mail.png" alt="">
+            <div id="due" class="col-12 col-md-5 col-lg-3 card p-5 p-md-4 p-sm-5 rounded-5 shadow">
+                <img class="img-fluid rounded-5 p-3" src="./img/email.png" alt="">
+                <div class="py-4 fw-bold fs-3">eMail Search</div>
             </div>
         </div>
     </div>
 
-    <div id="dice-game" class="container">
+    <div id="dice-game" class="container rounded-3 glass ">
         <div class="row text-center mt-5">
-            <div class="col-8 mx-auto ">
-                <div class="card rounded-4 p-2">
-                    <h2>Dice Game</h2>
-                    <div class="row justify-content-around py-5">
-                        <div id="" class="col-3 card p-4 rounded-5 shadow">
-                            <img class="img-fluid" src="./img/celsius.png" alt="">
-                            <div id="user-degrees"></div>
+            <div class="col-12 mx-auto p-0">
+                <div class="card text-center my_card border-0 p-5 ">
+                    <h2 class="mb-lg-5 ">Dice Game</h2>
+                    <div class="row justify-content-around mt-4 mb-2">
+                        <div id="user" class="col-12 col-md-3 card mb-3 rounded-5 shadow justify-content-center ">
                         </div>
-                        <div id="" class="col-3 card p-4 rounded-5 shadow">
-                            <img class="img-fluid" src="./img/farenheit.png" alt="">
-                            <div id="converted" class=""></div>
+                        <div id="cpu" class="col-12 col-md-3 card p-0 rounded-5 shadow justify-content-center ">
                         </div>
-
                     </div>
+                    <div id="result-game" class="pb-5 fs-3 fw-bold"></div>
+                    <div class="col-4 mx-auto justify-content-center ">
+                        <button id="play" class="btn btn-info text-center text-white">Gioca</button>
+                        <div class="col mt-5 text-center">
+                            <button id="btn_reload1" class="btn btn-lg btn-danger mt-5">Torna
+                                Indietro</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -49,68 +57,25 @@
 
     <div id="mail-app" class="container">
         <div class="row text-center">
-            <div class="col-8 mx-auto">
-                <div class="card rounded-4">
-                    <h2>Mail app</h2>
+            <div class="col-4 8 mx-auto">
+                <div class="card rounded-4 p-5 position-absolute top-50 translate-middle start-50">
+                    <h2>eMail Search</h2>
+                    <div class="mb-3">Inserisci la tua email</div>
+                    <input id="user-input" type="text" class="rounded-2 border-1 py-2">
+                    <div class="col mt-3 text-center">
+                        <button id="btnMail" class="btn btn-primary">Cerca</button>
+                    </div>
+                    <div id="result" class="mt-5"></div>
+                    <div id="reg-button" class="col mt-3 text-center">
+
+                    </div>
+                    <div class="col mt-5 text-center">
+                        <button id="btn_reload2" class="btn btn-lg btn-danger mt-5">Torna Indietro</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-    <!-- <div class="col mt-5 text-center">
-        <button id="btn_reload" class="btn btn-lg mt-5">Reload Page</button>
-    </div> -->
-
-    <!-- <div class="first-face">
-        <span class="pip"></span>
-    </div>
-    <div class="second-face">
-        <span class="pip"></span>
-        <span class="pip"></span>
-    </div>
-    <div class="third-face">
-        <span class="pip"></span>
-        <span class="pip"></span>
-        <span class="pip"></span>
-    </div>
-    <div class="fourth-face">
-        <div class="column">
-            <span class="pip"></span>
-            <span class="pip"></span>
-        </div>
-        <div class="column">
-            <span class="pip"></span>
-            <span class="pip"></span>
-        </div>
-    </div>
-    <div class="fifth-face">
-        <div class="column">
-            <span class="pip"></span>
-            <span class="pip"></span>
-        </div>
-        <div class="column">
-            <span class="pip"></span>
-        </div>
-        <div class="column">
-            <span class="pip"></span>
-            <span class="pip"></span>
-        </div>
-    </div>
-    <div class="sixth-face">
-        <div class="column">
-            <span class="pip"></span>
-            <span class="pip"></span>
-            <span class="pip"></span>
-        </div>
-        <div class="column">
-            <span class="pip"></span>
-            <span class="pip"></span>
-            <span class="pip"></span>
-        </div>
-    </div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
