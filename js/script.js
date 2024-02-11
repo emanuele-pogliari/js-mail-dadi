@@ -64,13 +64,11 @@ function mail() {
 
         if (emailSearch === true) {
             resultElement.innerHTML = "Mail trovata nel database, accesso eseguito";
+            document.querySelector("#reg-button").classList.remove("visible")
         }
         else {
             resultElement.innerHTML = `La Mail '${userMailElement.value}' non risulta nei nostri sistemi, registrati nel form qui sotto`;
-            const regForm = document.createElement("button");
-            regForm.classList.add("btn-success", "btn");
-            regForm.innerHTML = "Registrati"
-            document.querySelector("#reg-button").append(regForm);
+            document.querySelector("#reg-button").classList.add("visible")
         }
     })
 }

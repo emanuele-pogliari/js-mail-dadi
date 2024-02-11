@@ -37,3 +37,11 @@ body {
 .glass {
     backdrop-filter: blur(10px);
 }
+
+.my-reg-btn {
+    display: none;
+}
+
+.visible {
+    display: inline-block;
+}
